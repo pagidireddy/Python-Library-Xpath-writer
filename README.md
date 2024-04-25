@@ -13,16 +13,16 @@ pip install xpath-writer
 ## Usage
 
 ```python
-from xpath_generator import XPathGenerator, write_to_excel
+import xpath-writer as xw
 
 # Initialize XPathGenerator with the URL of the webpage
-generator = XPathGenerator('https://example.com')
+generator = xw.Xpath('https://example.com')
 
 # Fetch the webpage content
 generator.fetch_page()
 
 # Generate XPath expressions for specific HTML elements
-xpaths = generator.generate_xpath(tag_name='a')
+xpaths = generator.xpath_by_tag(tag_name='a')
 
 # Write XPath expressions to an Excel file
 write_to_excel(xpaths, 'xpath_output.xlsx')
